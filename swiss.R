@@ -1,15 +1,8 @@
 ############################
 ### Multiple Regression ###
 ### Example using KLC   ###
-### Date: June 18, 2019  ###   
+### Date: July 13, 2020 ###   
 ###########################
-
-
-################# Goals ######################
-# 1. Plot two variables simultaneously
-# 2. Visualize the effects of multiple variables 
-#    simultaneously
-###############################################
 
 # clean workspace
 rm(list=ls())
@@ -59,14 +52,14 @@ pdf("swiss.pdf")
 
 # plot the data
 plot(x = swiss$Agriculture, y = swiss$Fertility, pch = 20, 
-     col = ifelse(swiss$Catholic == 1, "red", "blue"), 
+     col = ifelse(swiss$Catholic == 1, "purple", "blue"), 
      xlab = "Agriculture", ylab = "Fertility", 
      main = "Predictors of Fertility in Switzerland")
 legend("topleft", legend = c("Catholic", "Protestant"),
-       pch = 20, col = c("red", "blue"), cex=.9, 
+       pch = 20, col = c("purple", "blue"), cex=.9, 
        x.intersp=.5, y.intersp=.6, bty="n")
 abline( a = 60.8322, b = 0.1242, col="blue")
-abline( a = 60.8322+7.8843, b = 0.1242, col="red")
+abline( a = 60.8322+7.8843, b = 0.1242, col="purple")
 
 dev.off()
 
